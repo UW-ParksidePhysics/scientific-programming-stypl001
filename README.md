@@ -1,4 +1,3 @@
-# scientific-programming
-Template respository for PHYS 241 Scientific Programming
-## Python
-Empty or template .py files
+my_list = ['greater-then','pipe','ampersand']
+index_number = 0
+print(my_list[index_number:index_number+1])
