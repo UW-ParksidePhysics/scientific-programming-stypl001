@@ -1,0 +1,268 @@
+#Concepts Addressed: Metacharacter, argument, redirection, parameter, shell, directory, file permission
+Last login: Thu Feb 22 14:21:53 on ttys000
+
+D134619961:~ stypl001$ cp -u *.html destination
+
+cp: illegal option -- u
+
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file target_file
+
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file ... target_directory
+
+D134619961:~ stypl001$ mkdir dir1
+
+D134619961:~ stypl001$ ls
+
+Applications Music
+
+Desktop Pictures
+
+Documents Public
+
+Downloads command-line-1-4-command-line.docx
+
+Library dir1
+
+Movies
+
+D134619961:~ stypl001$ mkdir dir2 dir3 dir4
+
+D134619961:~ stypl001$ ls
+
+Applications Pictures
+
+Desktop Public
+
+Documents command-line-1-4-command-line.docx
+
+Downloads dir1
+
+Library dir2
+
+Movies dir3
+
+Music dir4
+
+D134619961:~ stypl001$ mv dir4 dir1
+
+D134619961:~ stypl001$ ls
+
+Applications Pictures
+
+Desktop Public
+
+Documents command-line-1-4-command-line.docx
+
+Downloads dir1
+
+Library dir2
+
+Movies dir3
+
+Music
+
+D134619961:~ stypl001$ rm dir3
+
+rm: dir3: is a directory
+
+D134619961:~ stypl001$ rmdir dir3
+
+D134619961:~ stypl001$ ls
+
+Applications Music
+
+Desktop Pictures
+
+Documents Public
+
+Downloads command-line-1-4-command-line.docx
+
+Library dir1
+
+Movies dir2
+
+D134619961:~ stypl001$ cd 
+
+D134619961:~ stypl001$ mkdir playground
+
+D134619961:~ stypl001$ cd playground
+
+D134619961:playground stypl001$ mkdir dir1 dir2
+
+D134619961:playground stypl001$ cp /etc/passwd .
+
+D134619961:playground stypl001$ ls -l
+
+total 16
+
+drwxr-xr-x  2 stypl001  UWP\Domain Users    64 Feb 22 15:06 dir1
+
+drwxr-xr-x  2 stypl001  UWP\Domain Users    64 Feb 22 15:06 dir2
+
+-rw-r--r--  1 stypl001  UWP\Domain Users  6804 Feb 22 15:07 passwd
+
+D134619961:playground stypl001$ cp -v /etc/passwd .
+
+/etc/passwd -> ./passwd
+
+D134619961:playground stypl001$ cp -i /etc/passwd .
+
+overwrite ./passwd? (y/n [n]) y
+
+D134619961:playground stypl001$ mv passwd fun
+
+D134619961:playground stypl001$ mv fun dir1
+
+D134619961:playground stypl001$ mv dir1/fun dir2
+
+D134619961:playground stypl001$ mv dir2/fun .
+
+D134619961:playground stypl001$ ls
+
+dir1 dir2 fun
+
+D134619961:playground stypl001$ mv dir1 dir2
+
+D134619961:playground stypl001$ ls -l dir2
+
+total 0
+
+drwxr-xr-x  2 stypl001  UWP\Domain Users  64 Feb 22 15:10 dir1
+
+D134619961:playground stypl001$ ls -l dir2/dir1
+
+D134619961:playground stypl001$ mv dir2/dir1 .
+
+D134619961:playground stypl001$ mv dir1/fun .
+
+mv: dir1/fun: No such file or directory
+
+D134619961:playground stypl001$ mv fun dir1
+
+D134619961:playground stypl001$ ls
+
+dir1 dir2
+
+D134619961:playground stypl001$ ls dir1
+
+fun
+
+D134619961:playground stypl001$ ln fun fun-hard
+
+ln: fun: No such file or directory
+
+D134619961:playground stypl001$ mv dir1/fun .
+
+D134619961:playground stypl001$ ln fun fun-hard
+
+D134619961:playground stypl001$ ln fun dir1/fun-hard
+
+D134619961:playground stypl001$ ln fun dir2/fun-hard
+
+D134619961:playground stypl001$ ls -l
+
+total 32
+
+drwxr-xr-x  3 stypl001  UWP\Domain Users    96 Feb 22 15:14 dir1
+
+drwxr-xr-x  3 stypl001  UWP\Domain Users    96 Feb 22 15:14 dir2
+
+-rw-r--r--  4 stypl001  UWP\Domain Users  6804 Feb 22 15:08 fun
+
+-rw-r--r--  4 stypl001  UWP\Domain Users  6804 Feb 22 15:08 fun-hard
+
+D134619961:playground stypl001$ ls -li
+
+total 32
+
+8374814 drwxr-xr-x  3 stypl001  UWP\Domain Users    96 Feb 22 15:14 dir1
+
+8374815 drwxr-xr-x  3 stypl001  UWP\Domain Users    96 Feb 22 15:14 dir2
+
+8374846 -rw-r--r--  4 stypl001  UWP\Domain Users  6804 Feb 22 15:08 fun
+
+8374846 -rw-r--r--  4 stypl001  UWP\Domain Users  6804 Feb 22 15:08 fun-hard
+
+D134619961:playground stypl001$ ln -s fun fun-sym
+
+D134619961:playground stypl001$ ln -s ../fun dir1/fun-sym
+
+D134619961:playground stypl001$ ln -s ../fun dir2/fun-sym
+
+D134619961:playground stypl001$ ls -l dir1
+
+total 16
+
+-rw-r--r--  4 stypl001  UWP\Domain Users  6804 Feb 22 15:08 fun-hard
+
+lrwxr-xr-x  1 stypl001  UWP\Domain Users     6 Feb 22 15:16 fun-sym -> ../fun
+
+D134619961:playground stypl001$ ln -s dir1 dir1-sym
+
+D134619961:playground stypl001$ ls -l
+
+total 32
+
+drwxr-xr-x  4 stypl001  UWP\Domain Users   128 Feb 22 15:16 dir1
+
+lrwxr-xr-x  1 stypl001  UWP\Domain Users     4 Feb 22 15:17 dir1-sym -> dir1
+
+drwxr-xr-x  4 stypl001  UWP\Domain Users   128 Feb 22 15:16 dir2
+
+-rw-r--r--  4 stypl001  UWP\Domain Users  6804 Feb 22 15:08 fun
+
+-rw-r--r--  4 stypl001  UWP\Domain Users  6804 Feb 22 15:08 fun-hard
+
+lrwxr-xr-x  1 stypl001  UWP\Domain Users     3 Feb 22 15:15 fun-sym -> fun
+
+D134619961:playground stypl001$ rm fun-hard
+
+D134619961:playground stypl001$ ls -l
+
+total 16
+
+drwxr-xr-x  4 stypl001  UWP\Domain Users   128 Feb 22 15:16 dir1
+
+lrwxr-xr-x  1 stypl001  UWP\Domain Users     4 Feb 22 15:17 dir1-sym -> dir1
+
+drwxr-xr-x  4 stypl001  UWP\Domain Users   128 Feb 22 15:16 dir2
+
+-rw-r--r--  3 stypl001  UWP\Domain Users  6804 Feb 22 15:08 fun
+
+lrwxr-xr-x  1 stypl001  UWP\Domain Users     3 Feb 22 15:15 fun-sym -> fun
+
+D134619961:playground stypl001$ rm -i fun
+
+remove fun? y
+
+D134619961:playground stypl001$ ls -l
+
+total 0
+
+drwxr-xr-x  4 stypl001  UWP\Domain Users  128 Feb 22 15:16 dir1
+
+lrwxr-xr-x  1 stypl001  UWP\Domain Users    4 Feb 22 15:17 dir1-sym -> dir1
+
+drwxr-xr-x  4 stypl001  UWP\Domain Users  128 Feb 22 15:16 dir2
+
+lrwxr-xr-x  1 stypl001  UWP\Domain Users    3 Feb 22 15:15 fun-sym -> fun
+
+D134619961:playground stypl001$ less fun-sym
+
+fun-sym: No such file or directory
+
+D134619961:playground stypl001$ rm fun-sym dir1-sym
+
+D134619961:playground stypl001$ ls -l
+
+total 0
+
+drwxr-xr-x  4 stypl001  UWP\Domain Users  128 Feb 22 15:16 dir1
+
+drwxr-xr-x  4 stypl001  UWP\Domain Users  128 Feb 22 15:16 dir2
+
+D134619961:playground stypl001$ cd
+
+D134619961:~ stypl001$ rm -r playground
+
+D134619961:~ stypl001$ 

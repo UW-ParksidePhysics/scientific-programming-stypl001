@@ -1,0 +1,157 @@
+#Concepts Addressed: prompt, directory, argument, redirection
+Last login: Thu Feb  1 13:59:36 on console
+
+D134619961:~ stypl001$ hjfkdahdfui
+
+-bash: hjfkdahdfui: command not found
+
+D134619961:~ stypl001$ date
+
+Thu Feb  1 15:13:33 CST 2024
+
+D134619961:~ stypl001$ cal
+
+   February 2024      
+
+Su Mo Tu We Th Fr Sa  
+
+             1  2  3  
+
+ 4  5  6  7  8  9 10  
+
+11 12 13 14 15 16 17  
+
+18 19 20 21 22 23 24  
+
+25 26 27 28 29        
+
+                      
+
+D134619961:~ stypl001$ df
+
+Filesystem                        512-blocks       Used  Available Capacity   iused               ifree %iused  Mounted on
+
+/dev/disk1s1                       236363688   97995008  132847872    43%   1008261 9223372036853767546    0%   /
+
+devfs                                    370        370          0   100%       640                   0  100%   /dev
+
+/dev/disk1s4                       236363688    4194344  132847872     4%         1 9223372036854775806    0%   /private/var/vm
+
+map -hosts                                 0          0          0   100%         0                   0  100%   /net
+
+map auto_home                              0          0          0   100%         0                   0  100%   /home
+
+map -fstab                                 0          0          0   100%         0                   0  100%   /Network/Servers
+
+//stypl001@uwpfs.ad.uwp.edu/Home 10737381368 1160167672 9577213696    11% 145020957          1197151712   11%   /Volumes/Home
+
+/dev/disk1s2                       236363688      82416  132847872     1%       112 9223372036854775695    0%   /Volumes/Preboot
+
+/dev/disk0s1                          612944      32360     580584     6%         0                   0  100%   /Volumes/firmwaresyncd.1OGmJl
+
+D134619961:~ stypl001$ free
+
+-bash: free: command not found
+
+D134619961:~ stypl001$ free
+
+-bash: free: command not found
+
+D134619961:~ stypl001$ help
+
+GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin18)
+
+These shell commands are defined internally.  Type `help' to see this list.
+
+Type `help name' to find out more about the function `name'.
+
+Use `info bash' to find out more about the shell in general.
+
+Use `man -k' or `info' to find out more about commands not in this list.
+
+ 
+
+A star (*) next to a name means that the command is disabled.
+
+ 
+
+ JOB_SPEC [&]                       (( expression ))
+
+ . filename [arguments]             :
+
+ [ arg... ]                         [[ expression ]]
+
+ alias [-p] [name[=value] ... ]     bg [job_spec ...]
+
+ bind [-lpvsPVS] [-m keymap] [-f fi break [n]
+
+ builtin [shell-builtin [arg ...]]  caller [EXPR]
+
+ case WORD in [PATTERN [| PATTERN]. cd [-L|-P] [dir]
+
+ command [-pVv] command [arg ...]   compgen [-abcdefgjksuv] [-o option
+
+ complete [-abcdefgjksuv] [-pr] [-o continue [n]
+
+ declare [-afFirtx] [-p] [name[=val dirs [-clpv] [+N] [-N]
+
+ disown [-h] [-ar] [jobspec ...]    echo [-neE] [arg ...]
+
+ enable [-pnds] [-a] [-f filename]  eval [arg ...]
+
+ exec [-cl] [-a name] file [redirec exit [n]
+
+ export [-nf] [name[=value] ...] or false
+
+ fc [-e ename] [-nlr] [first] [last fg [job_spec]
+
+ for NAME [in WORDS ... ;] do COMMA for (( exp1; exp2; exp3 )); do COM
+
+ function NAME { COMMANDS ; } or NA getopts optstring name [arg]
+
+ hash [-lr] [-p pathname] [-dt] [na help [-s] [pattern ...]
+
+ history [-c] [-d offset] [n] or hi if COMMANDS; then COMMANDS; [ elif
+
+ jobs [-lnprs] [jobspec ...] or job kill [-s sigspec | -n signum | -si
+
+ let arg [arg ...]                  local name[=value] ...
+
+ logout                             popd [+N | -N] [-n]
+
+ printf [-v var] format [arguments] pushd [dir | +N | -N] [-n]
+
+ pwd [-LP]                          read [-ers] [-u fd] [-t timeout] [
+
+ readonly [-af] [name[=value] ...]  return [n]
+
+ select NAME [in WORDS ... ;] do CO set [--abefhkmnptuvxBCHP] [-o opti
+
+ shift [n]                          shopt [-pqsu] [-o long-option] opt
+
+ source filename [arguments]        suspend [-f]
+
+ test [expr]                        time [-p] PIPELINE
+
+ times                              trap [-lp] [arg signal_spec ...]
+
+ true                               type [-afptP] name [name ...]
+
+ typeset [-afFirtx] [-p] name[=valu ulimit [-SHacdfilmnpqstuvx] [limit
+
+ umask [-p] [-S] [mode]             unalias [-a] name [name ...]
+
+ unset [-f] [-v] [name ...]         until COMMANDS; do COMMANDS; done
+
+ variables - Some variable names an wait [n]
+
+ while COMMANDS; do COMMANDS; done  { COMMANDS ; }
+
+D134619961:~ stypl001$  free
+
+-bash: free: command not found
+
+D134619961:~ stypl001$ 
+#We were able to quickly and easily access the shell and input commands
+#We encountered many difficulties with accepting the assingment in github
+#
