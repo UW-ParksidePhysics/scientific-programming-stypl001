@@ -1,7 +1,11 @@
+
+
 from math import sin, cos, pi
 import math
 
 import matplotlib.pyplot as plt
+
+
 
 def max_height_time(v,g):
   return (0-v)/(-g)
@@ -21,27 +25,20 @@ def horizonal_velocity(v,x):
 angles = pi/6
 
 v = 100  
-g = [3.7,8.87,9.81,1.6,3.711,23.1,9.0,8.7,11.0,0.7]
-bodies = ["mercury", "venus   ", "earth   ", "moon   ", "mars   ", "jupiter ", "saturn  ", "uranus  ", "neptune ", "pluto  "]
+g = [3.7,8.87,9.81,1.6,3.711,23.1,9.0,8.7,11.0]
+bodies = ["mercury", "venus   ", "earth   ", "moon   ", "mars   ", "jupiter ", "saturn  ", "uranus  ", "neptune "]
 
 
-print('Body', 'Time in Air', 'Max Hight')
+print('Body     ', 'Time in Air', 'Max Hight', "max Distance")
 for index, element in enumerate(bodies): 
   max_height_time_val = max_height_time(vertical_velocity(v, angles), g[index])
   time_in_air_val = max_height_time_val * 2
   height_val = height_of_cannon_ball(0, vertical_velocity(v, angles), max_height_time_val)
   max_distance_val = max_distance(horizonal_velocity(v, angles), max_height_time_val)
-  print(element, f'{time_in_air_val:3.2f}', f'{height_val:3.2f}',f'{max_distance_val:3.2f}')
+  print(element, f'{time_in_air_val:.2f}', f'{height_val:.2f}',f'{max_distance_val:.2f}')
+plt.plot(height_val,max_distance_val)
 
-
-x = [1,2,3]
-y = [2,4,1]
-plt.plot(x,y)
-
-plt.xlabel('x-axis')
-plt.ylabel('y-axis')
-
-  
+plt.show()
 
 #print(f'The mass of a liter of platinum is {platinum * .001:.2f} KG')
 
@@ -71,4 +68,3 @@ plt.ylabel('y-axis')
 #velocity v =v0+100 m/s
 #if v <= 1500 m/s:
 #if h <= 100m
-
