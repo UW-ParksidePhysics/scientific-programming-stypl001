@@ -54,7 +54,7 @@ for idx, grav_acc in enumerate(g): # Calculate trajectory for every plante
     plt.title("Projectile Motion - Height vs Distance")
     plt.xlabel("Distance (m)")
     plt.ylabel("Height (m)")
-plt.legend(loc = 2)
+plt.legend(loc = 1)
 
 #This is for the graph of velocity vs time.
 plt.figure(2)
@@ -76,7 +76,7 @@ for idx, grav_acc in enumerate(g): # calculate velocity for every plante
   plt.title("Projectile Motion - Velocity vs Time")
   plt.xlabel("Time (sec)")
   plt.ylabel("Velocity (m/s)")
-plt.legend(loc=2)
+plt.legend(loc= 1)
 
 # This is to show the graph of Height vs Time.
 plt.figure(3)
@@ -100,7 +100,7 @@ for idx, grav_acc in enumerate(g): # calculate trajectory for every plante
   plt.title("Projectile Motion - Height vs Time")
   plt.xlabel("Time (sec)")
   plt.ylabel("Height (m)")
-plt.legend(loc=2)
+plt.legend(loc= 1)
 plt.show()
 
 
