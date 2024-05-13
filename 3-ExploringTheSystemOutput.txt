@@ -1,0 +1,30 @@
+#Concepts Addressed: Prompt, Shell, Directory, File permission, Metacharacter, 
+frankfelerski@LAPTOP-A1904S8F:~$ ls
+foo.txt  foo1.txt  ls-output.txt
+frankfelerski@LAPTOP-A1904S8F:~$ ls /usr
+bin  config  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src
+frankfelerski@LAPTOP-A1904S8F:~$ ls ~ /usr
+/home/frankfelerski:
+foo.txt  foo1.txt  ls-output.txt
+
+/usr:
+bin  config  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src
+frankfelerski@LAPTOP-A1904S8F:~$ ls -l
+total 156
+-rw-rw-r-- 1 frankfelerski frankfelerski    87 Feb 28  2022 foo.txt
+-rw-rw-r-- 1 frankfelerski frankfelerski 74164 Feb 28  2022 foo1.txt
+-rw-rw-r-- 1 frankfelerski frankfelerski 74164 Feb 28  2022 ls-output.txt
+frankfelerski@LAPTOP-A1904S8F:~$ ls -lt
+total 156
+-rw-rw-r-- 1 frankfelerski frankfelerski 74164 Feb 28  2022 foo1.txt
+-rw-rw-r-- 1 frankfelerski frankfelerski 74164 Feb 28  2022 ls-output.txt
+-rw-rw-r-- 1 frankfelerski frankfelerski    87 Feb 28  2022 foo.txt
+frankfelerski@LAPTOP-A1904S8F:~$ ls -lt --reverse
+total 156
+-rw-rw-r-- 1 frankfelerski frankfelerski    87 Feb 28  2022 foo.txt
+-rw-rw-r-- 1 frankfelerski frankfelerski 74164 Feb 28  2022 ls-output.txt
+-rw-rw-r-- 1 frankfelerski frankfelerski 74164 Feb 28  2022 foo1.txt
+frankfelerski@LAPTOP-A1904S8F:~$ file foo.txt
+foo.txt: ASCII text
+frankfelerski@LAPTOP-A1904S8F:~$ less foo.txt
+frankfelerski@LAPTOP-A1904S8F:~$

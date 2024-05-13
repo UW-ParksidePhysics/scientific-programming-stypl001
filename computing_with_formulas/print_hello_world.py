@@ -1,2 +1,4 @@
+i_name = "Isabelle"
 
-print{"Hello, World! My name is Isabelle"  }
+print(f'Hello, World! My name is {i_name}')
+
